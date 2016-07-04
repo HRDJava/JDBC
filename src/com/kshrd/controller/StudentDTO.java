@@ -1,13 +1,13 @@
 package com.kshrd.controller;
 
-public class Student {
+public class StudentDTO {
 	Integer stuid;
 	String stuname;
 	String sex;
 	String email;
 	String phone;
 	Integer score;
-	public Student(Integer stuid, String stuname, String sex, String email, String phone, Integer score) {
+	public StudentDTO(Integer stuid, String stuname, String sex, String email, String phone, Integer score) {
 		super();
 		this.stuid = stuid;
 		this.stuname = stuname;
