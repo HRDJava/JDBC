@@ -7,17 +7,18 @@ import java.util.Properties;
 
 public class ConnectionManager {
 	public static Connection  conn = null;
-	public static String NAME_URL="jdbc:mysql://localhost:3306/stockmanagementsystem";
+	public static String URL="jdbc:postgresql://localhost:5432/jdbc";
 	private ConnectionManager() {}
 	
 	public static  Connection getConnection() throws ClassNotFoundException, SQLException{
-		Class.forName("com.mysql.jdbc.Driver");
+		Class.forName("org.postgresql.Driver");
 		Properties p = new Properties();
 		p.put("user", "postgres");
 		p.put("password", "123");
 		if (conn==null)
 		{
-			conn= DriverManager.getConnection(NAME_URL,p);
+			conn= DriverManager.getConnection(URL,p);
+			
 		}
 		return conn;
 	}
